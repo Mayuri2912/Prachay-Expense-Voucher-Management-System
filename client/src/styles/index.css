@@ -1,0 +1,14 @@
+/* All styles for the application, loaded once from main.jsx.
+   variables  - colours, spacing and other design tokens
+   base       - page defaults (fonts, headings, links, form controls)
+   layout     - sidebar, top bar and page frame
+   components - buttons, cards, tables, badges, dialogs ...
+   pages      - styles that belong to one specific page
+   print      - the print-friendly voucher */
+
+@import './variables.css';
+@import './base.css';
+@import './layout.css';
+@import './components.css';
+@import './pages.css';
+@import './print.css';

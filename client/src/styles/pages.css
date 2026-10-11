@@ -1,0 +1,364 @@
+/* Styles that belong to one specific page. */
+
+/* ---------------- Login ---------------- */
+
+.login-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.login-brand {
+  display: grid;
+  place-items: center;
+  padding: 48px;
+  color: var(--slate-300);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(37, 99, 235, 0.35), transparent 45%),
+    linear-gradient(160deg, var(--navy-900) 0%, var(--navy-950) 100%);
+}
+
+.login-brand-inner {
+  max-width: 440px;
+}
+
+.login-company {
+  margin-top: 22px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-200);
+}
+
+.login-brand h2 {
+  margin-top: 6px;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.login-tagline {
+  margin-top: 12px;
+  font-size: 1.05rem;
+}
+
+.login-points {
+  display: grid;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.login-points li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-points .icon {
+  color: var(--blue-200);
+}
+
+.login-panel {
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+  background: var(--slate-50);
+}
+
+.login-card {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.login-card h1 + p {
+  margin-top: -12px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 48px;
+}
+
+.password-field .icon-button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
+.demo-box {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  background: var(--blue-50);
+  border: 1px dashed var(--blue-200);
+  border-radius: var(--radius);
+}
+
+.demo-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy-700);
+}
+
+.demo-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 880px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand {
+    display: none;
+  }
+
+  .login-card {
+    padding: 24px;
+  }
+}
+
+/* ---------------- Voucher form ---------------- */
+
+.voucher-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---------------- Voucher details ---------------- */
+
+.voucher-document {
+  display: grid;
+  gap: 24px;
+}
+
+.voucher-document-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--navy-900);
+}
+
+.voucher-company {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-700);
+}
+
+.voucher-document-header h2 {
+  font-size: 1.4rem;
+}
+
+.voucher-number-block {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+
+.voucher-number-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate-500);
+}
+
+.voucher-number {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--slate-900);
+}
+
+.section-title {
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy-700);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.amount-large {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.signature-block {
+  display: grid;
+  gap: 2px;
+}
+
+.signature-name {
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--slate-900);
+}
+
+.signature-role {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.rejection-reason {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+  .signature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .voucher-number-block {
+    justify-items: start;
+  }
+}
+
+/* ---------------- Submission confirmation ---------------- */
+
+.confirmation-card {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.confirmation-details {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 18px;
+  text-align: left;
+  background: var(--slate-50);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.confirmation-details > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.confirmation-details dd {
+  margin: 0;
+  text-align: right;
+}
+
+.confirmation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* ---------------- Profile ---------------- */
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.profile-card {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.profile-card .detail-list {
+  margin: 16px 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 800px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------- Access denied / not found ---------------- */
+
+.message-page {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  max-width: 520px;
+  margin: 48px auto;
+  text-align: center;
+}
+
+.message-page-standalone {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px;
+  align-content: center;
+}
+
+.message-page .btn {
+  margin-top: 12px;
+}
+
+.message-icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  color: var(--amber-700);
+  background: var(--amber-100);
+  border-radius: 50%;
+}
+
+.message-icon-red {
+  color: var(--red-700);
+  background: var(--red-100);
+}
+
+.message-icon-green {
+  color: var(--green-700);
+  background: var(--green-100);
+}
+
+.message-code {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--slate-500);
+}

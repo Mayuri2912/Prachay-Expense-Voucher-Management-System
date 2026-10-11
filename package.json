@@ -1,0 +1,17 @@
+{
+  "name": "prachay-expense-voucher-system",
+  "version": "1.0.0",
+  "description": "Expense Voucher Management System - React + Express + MySQL",
+  "private": true,
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "env:init": "node scripts/create-env.js",
+    "db:setup": "npm run db:setup --prefix server",
+    "db:reset": "npm run db:reset --prefix server",
+    "db:hash": "npm run db:hash --prefix server --",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "test": "npm test --prefix server",
+    "build": "npm run build --prefix client"
+  }
+}

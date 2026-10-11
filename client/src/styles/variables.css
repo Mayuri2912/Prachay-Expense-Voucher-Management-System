@@ -1,0 +1,72 @@
+/* Design tokens: change a value here and the whole application follows. */
+
+:root {
+  /* Brand - navy and blue */
+  --navy-950: #081a33;
+  --navy-900: #0f2747;
+  --navy-800: #16345c;
+  --navy-700: #1f4477;
+  --blue-700: #1d4ed8;
+  --blue-600: #2563eb;
+  --blue-200: #bfdbfe;
+  --blue-100: #dbeafe;
+  --blue-50: #eff6ff;
+
+  /* Neutrals */
+  --slate-900: #0f172a;
+  --slate-800: #1e293b;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-300: #cbd5e1;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --slate-50: #f8fafc;
+  --white: #ffffff;
+
+  /* Status colours */
+  --green-800: #166534;
+  --green-700: #15803d;
+  --green-200: #bbf7d0;
+  --green-100: #dcfce7;
+  --green-50: #f0fdf4;
+  --amber-800: #92400e;
+  --amber-700: #b45309;
+  --amber-200: #fde68a;
+  --amber-100: #fef3c7;
+  --amber-50: #fffbeb;
+  --red-800: #991b1b;
+  --red-700: #b91c1c;
+  --red-600: #dc2626;
+  --red-200: #fecaca;
+  --red-100: #fee2e2;
+  --red-50: #fef2f2;
+
+  /* Meaningful names used by the components */
+  --color-page: var(--slate-100);
+  --color-surface: var(--white);
+  --color-border: var(--slate-200);
+  --color-text: var(--slate-800);
+  --color-text-muted: var(--slate-500);
+  --color-primary: var(--blue-700);
+  --color-primary-hover: #1a43b8;
+  --color-focus: #f59e0b;
+
+  /* Typography */
+  --font: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Cascadia Mono', Consolas, 'Courier New', monospace;
+
+  /* Shape and depth */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.22);
+
+  /* Layout sizes */
+  --sidebar-width: 264px;
+  --topbar-height: 64px;
+  --content-width: 1240px;
+}

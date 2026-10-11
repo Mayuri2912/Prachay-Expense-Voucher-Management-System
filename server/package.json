@@ -1,0 +1,30 @@
+{
+  "name": "prachay-expense-voucher-server",
+  "version": "1.0.0",
+  "description": "Express + MySQL REST API for the Expense Voucher Management System",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:setup": "node src/scripts/setupDatabase.js",
+    "db:reset": "node src/scripts/setupDatabase.js --reset",
+    "db:hash": "node src/scripts/hashPassword.js",
+    "test": "node --test tests/api.test.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "mysql2": "^3.24.5"
+  }
+}

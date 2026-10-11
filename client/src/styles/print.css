@@ -1,0 +1,79 @@
+/* Print-friendly voucher.
+   "Print / Save as PDF" on the voucher details page calls window.print().
+   These rules hide the navigation and buttons, so only the voucher itself is printed. */
+
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+@media print {
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Everything that is not part of the voucher. */
+  .sidebar,
+  .sidebar-backdrop,
+  .topbar,
+  .skip-link,
+  .toast-region,
+  .page-header,
+  .no-print,
+  dialog {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  .app-main {
+    margin: 0;
+  }
+
+  .page {
+    max-width: none;
+    padding: 0;
+    gap: 0;
+  }
+
+  .card {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .voucher-document {
+    gap: 16px;
+  }
+
+  /* Keep each section (and the two signatures) together on one page. */
+  .voucher-document section,
+  .signature-block {
+    break-inside: avoid;
+  }
+
+  .detail-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 16px;
+  }
+
+  .signature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Print the status colours and signature boxes as they appear on screen. */
+  .badge,
+  .signature-box {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

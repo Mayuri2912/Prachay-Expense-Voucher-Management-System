@@ -1,0 +1,318 @@
+/* The application frame: sidebar, top bar and page area. */
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100;
+  padding: 10px 16px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--navy-900);
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ---------------- Sidebar ---------------- */
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  width: var(--sidebar-width);
+  padding: 18px 14px;
+  color: var(--slate-300);
+  background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
+  overflow-y: auto;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 8px 20px;
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-brand:hover {
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--white);
+  background: var(--blue-600);
+  border-radius: var(--radius);
+  flex-shrink: 0;
+}
+
+.brand-mark-large {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+}
+
+.brand-name {
+  display: block;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.brand-product {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--slate-400);
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.sidebar-heading {
+  padding: 18px 12px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+}
+
+.sidebar-nav ul {
+  display: grid;
+  gap: 4px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--slate-300);
+  border-radius: var(--radius-sm);
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.nav-link:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.nav-link-active,
+.nav-link-active:hover {
+  color: var(--white);
+  background: var(--blue-700);
+  font-weight: 600;
+}
+
+.nav-button {
+  text-align: left;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.sidebar-footer {
+  padding: 14px 12px 4px;
+  font-size: 0.8rem;
+  color: var(--slate-400);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-wrap: anywhere;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+/* ---------------- Main area ---------------- */
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: var(--sidebar-width);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: var(--topbar-height);
+  padding: 0 28px;
+  background: var(--white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* The menu button only exists on small screens (see the media query below). */
+.topbar .menu-button {
+  display: none;
+}
+
+.topbar-title {
+  flex: 1;
+  min-width: 0;
+  font-weight: 600;
+  color: var(--slate-600);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+  color: inherit;
+  border-radius: var(--radius);
+}
+
+.user-chip:hover {
+  background: var(--slate-100);
+  text-decoration: none;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--navy-800);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.avatar-large {
+  width: 76px;
+  height: 76px;
+  font-size: 1.5rem;
+}
+
+.user-chip-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.user-chip-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--slate-900);
+}
+
+.user-chip-role {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page:focus {
+  outline: none;
+}
+
+/* ---------------- Tablet and phone: the sidebar slides in ---------------- */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+    /* Closing: slide out first, then hide (visibility waits for the 0.2s slide). */
+    transition:
+      transform 0.2s ease,
+      visibility 0s linear 0.2s;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .sidebar-open {
+    transform: translateX(0);
+    /* Opening: visible at once, so keyboard focus can move into the menu immediately. */
+    transition:
+      transform 0.2s ease,
+      visibility 0s;
+  }
+
+  /* While it is closed the menu must not be reachable with the Tab key. */
+  .sidebar:not(.sidebar-open) {
+    visibility: hidden;
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 35;
+    background: rgba(15, 23, 42, 0.5);
+  }
+
+  .app-main {
+    margin-left: 0;
+  }
+
+  .topbar .menu-button {
+    display: grid;
+  }
+
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .page {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .user-chip-text,
+  .logout-button span {
+    display: none;
+  }
+
+  .topbar-user {
+    gap: 6px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+}
